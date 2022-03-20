@@ -5,9 +5,13 @@ import java.util.Locale;
 public class Main {
 
     public static void main(String[] args) {
+        int sum = new Main().getSum("Hans");
+        System.out.println("This is your name as a number: " + sum);
+    }
 
+    public int getSum(String name){
         //Enter your name between the quotation marks
-        String name = "Az".toUpperCase();
+        name = name.toUpperCase();
         int sum = 0;
 
         for (int i = 0; i < name.length(); i++) {
@@ -90,6 +94,6 @@ public class Main {
                 sum = sum + 26;
             }
         }
-        System.out.println("This is your name as a number: " + sum);
+        return sum;
     }
 }
